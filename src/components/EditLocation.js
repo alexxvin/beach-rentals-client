@@ -19,7 +19,6 @@ function EditLocation(props) {
       .get(`${API_URL}/api/location/${locationId}`)
       .then((response) => {
         const oneLocation = response.data;
-
         setStreet(oneLocation.street);
         setCity(oneLocation.city);
         setState(oneLocation.state);
@@ -40,7 +39,7 @@ function EditLocation(props) {
       });
   };
 
-  const deleteProject = () => {
+  const deleteLocation = () => {
     axios
       .delete(`${API_URL}/api/location/${locationId}`)
       .then(() => {
@@ -99,9 +98,9 @@ function EditLocation(props) {
           onChange={(e) => setZip(e.target.value)}
         />
 
-        <button type="submit">Update Project</button>
-        <button onClick={deleteProject}>Delete Project</button>
+        <button type="submit">Update Location</button>
       </form>
+      <button onClick={deleteLocation}>Delete Location</button>
     </div>
   );
 }

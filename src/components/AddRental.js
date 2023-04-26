@@ -36,6 +36,7 @@ function AddRental(props) {
           type="text"
           name="title"
           value={title}
+          placeholder="Rental title"
           onChange={(e) => setTitle(e.target.value)}
         />
         <label>Description</label>
@@ -43,6 +44,7 @@ function AddRental(props) {
           type="text"
           name="description"
           value={description}
+          placeholder="Rental description"
           onChange={(e) => setDescription(e.target.value)}
         />
         <label>Price</label>
@@ -50,6 +52,7 @@ function AddRental(props) {
           type="number"
           name="price"
           value={price}
+          placeholder="Rental Price"
           onChange={(e) => setPrice(e.target.value)}
         />
         <button type="submit">Add Rental</button>

@@ -8,6 +8,7 @@ import LocationDetailsPage from "./components/LocationDetailsPage";
 import EditLocation from "./components/EditLocation";
 import RentalDetailsPage from "./components/RentalDetailsPage";
 import RentalCard from "./components/RentalCard";
+import EditRental from "./components/EditRental";
 
 function App() {
   return (
@@ -18,10 +19,8 @@ function App() {
         <Route path="/location" element={<LocationsPage />} />
         <Route path="/location/:locationId" element={<LocationDetailsPage />} />
         <Route path="/location/edit/:locationId" element={<EditLocation />} />
-        <Route
-          path="/rentals/:rentalId"
-          element={<RentalDetailsPage locationId />}
-        />
+        <Route path="/rentals/:rentalId" element={<RentalDetailsPage />} />
+        <Route path="/rentals/edit/:rentalId" element={<EditRental />} />
       </Routes>
     </div>
   );

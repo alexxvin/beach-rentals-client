@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
-import { Link } from "react-router-dom";
 import AddLocation from "./AddLocation";
 import LocationCard from "./LocationCard";
 
@@ -24,20 +23,10 @@ function LocationsPage() {
       <h3>Locations Page</h3>
       <AddLocation refreshLocations={getAllLocations} />
 
-      {
-        locations.map((location, id) => {
-          console.log(location);
-          return <LocationCard key={id} {...location} />;
-        })
-        // return (
-
-        //   <div className="LocationCard card" key={location._id}>
-        //     <Link to={`/location/${location._id}`}>
-        //       <h3>{location.name}</h3>
-        //     </Link>
-        //   </div>
-        // );
-      }
+      {locations.map((location, id) => {
+        console.log(location);
+        return <LocationCard key={id} {...location} />;
+      })}
     </div>
   );
 }

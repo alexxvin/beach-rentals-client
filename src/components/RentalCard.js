@@ -13,7 +13,7 @@ function RentalCard(props) {
       {props.rentalPic && (
         <img id="rentalPic" src={props.rentalPic} alt="rental pic" />
       )}
-      {!props.rentalPic && <button>Add rental picture</button>}
+      {!props.rentalPic && <button>Add Rental Picture</button>}
       <Link to={`/rentals/${props._id}`}>
         <button>More info</button>
       </Link>
