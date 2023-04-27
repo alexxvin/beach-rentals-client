@@ -45,3 +45,38 @@ img{
 #rentalDetailsImage{
   width: 30%;
 }
+
+.navbar{
+  align-items: center;
+  box-sizing: border-box;
+  color: rgb(248, 7, 95);
+  display: flex;
+  font-size: 15px;
+  font-style:normal;
+  font-weight: 400;
+  justify-content:space-between;
+  line-height: 24px;
+  margin-left: 279px;
+  margin-right:279px;
+  max-width: 1170px;
+  padding-left: 15px;
+  padding-right: 15px;
+  text-align: left;
+
+}
+
+.home-logo{
+border-bottom-style: none;
+border-left-style: none;
+border-right-style: none;
+border-top-style: none;
+box-sizing: border-box;
+cursor: pointer;
+display: inline;
+height: 55px;
+line-height: 30px;
+max-width: 170px;
+vertical-align: top;
+text-size-adjust: 100%;
+
+}

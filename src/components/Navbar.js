@@ -3,13 +3,16 @@ import { Link, NavLink } from "react-router-dom";
 function Navbar() {
   return (
     <nav className="Navbar">
-      <ul>
-        <NavLink
-          to="/"
-          className={({ isActive }) => (isActive ? "selected" : "")}
-        >
-          Home
-        </NavLink>
+      <div className="navbar">
+        <div className="home-logo">
+          <NavLink to="/">
+            <img
+              class="nav-logo"
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQe0chqr6tqcjgbEaGom4XN7HhhlSBxj1wEOQ&usqp=CAU"
+              alt="logo"
+            />
+          </NavLink>
+        </div>
         <NavLink
           to="how-it-works"
           className={({ isActive }) => (isActive ? "selected" : "")}
@@ -22,7 +25,7 @@ function Navbar() {
         >
           Locations
         </NavLink>
-      </ul>
+      </div>
     </nav>
   );
 }
