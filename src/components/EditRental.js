@@ -52,7 +52,7 @@ function EditRental(props) {
       <h1>Edit Rental Page</h1>
 
       <form onSubmit={handleFormSubmit}>
-        <label>Title:</label>
+        <label className="label">Title:</label>
         <input
           type="text"
           name="title"
@@ -60,7 +60,7 @@ function EditRental(props) {
           placeholder="Title"
           onChange={(e) => setTitle(e.target.value)}
         />
-        <label>Description</label>
+        <label className="label">Description</label>
         <textarea
           type="text"
           name="description"
@@ -68,7 +68,7 @@ function EditRental(props) {
           placeholder="Rental description"
           onChange={(e) => setDescription(e.target.value)}
         />
-        <label>Price</label>
+        <label className="label">Price</label>
         <input
           type="number"
           name="price"
@@ -76,8 +76,9 @@ function EditRental(props) {
           placeholder="Rental price"
           onChange={(e) => setPrice(e.target.value)}
         />
-        {/* <img src={rentalPic} id="rentalDetailsImage" alt="rentalimage" /> */}
-        <button type="submit">Update Rental</button>
+        <div>
+          <button type="submit">Update Rental</button>
+        </div>
       </form>
       <button onClick={deleteRental}>Delete Rental</button>
     </div>

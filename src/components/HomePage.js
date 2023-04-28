@@ -6,11 +6,6 @@ function HomePage() {
       <div>
         <div className="Homepage-banner-content">
           <div className="banner-content">
-            {/* <img
-              className="background-image"
-              src="https://e0.pxfuel.com/wallpapers/580/162/desktop-wallpaper-hotels-in-south-florida-hollywood-beach-marriott-resort-in-fla-for-your-mobile-tablet-explore-hollywood-beach-hollywood-beach-hollywood-hollywood.jpg"
-              alt="beach"
-            ></img> */}
             <h2 className="banner-title">
               Life takes you down many paths but my favorite ones lead to the
               beach
@@ -43,7 +38,6 @@ function HomePage() {
             </div>
           </div>
         </div>
-        {/* <ReactPlayer url="https://www.youtube.com/watch?v=yXOe5mvalRw" playing /> */}
       </div>
     </body>
   );

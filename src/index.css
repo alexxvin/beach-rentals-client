@@ -2,6 +2,8 @@ body {
   margin: 0;
 background-image: url(./images/hollywood-beach.jpeg);
 background-size: cover;
+background-repeat: no-repeat;
+max-height: fit-content;
 
 }
 .banner-title{
@@ -14,10 +16,11 @@ background-size: cover;
   font-weight: 900;
   line-height: 60px;
   text-align: center;
-  margin-block-end: 30px;
-  margin-block-start: 30px;
+  margin-top: 0;
   margin-bottom:30px;
   margin-left: 30px;
+  margin-right: 30px;
+  padding-top: 20px;
   text-align:center;
   overflow-wrap: break-word;
   width:1000;
@@ -31,7 +34,9 @@ background-size: cover;
   max-width: 1200px;
   padding-left: 15px;
   padding-right: 15px;
+  padding-top: 30px;
   text-align:center;
+  padding-top: 0;
  
 }
 .banner-content{
@@ -63,19 +68,30 @@ max-width: 100%;
 position: relative;
 width:50%;
 display:block;
+color: #470ff1;
 box-sizing: border-box;
 
+ }
+
+ .section-text p{
+  color: #470ff1;
 
  }
+
  .section-heading h2{
 font-size: 48px;
 font-weight: 900;
 line-height: 1.1;
 text-transform: uppercase;
 margin:0 0 15px;
-color: #101f46;
+color: #470ff1;
 box-sizing: border-box;
 
+ }
+
+ .section-text{
+  padding-right:20px;
+  color: #470ff1;
  }
 
  .row-align-items{
@@ -89,13 +105,38 @@ box-sizing: border-box;
  p{
   line-height: 1.6;
   margin: 0px;
-  margin-left: 100px;
+  margin-left: 20px;
+  margin-right: 20px;
    color: #101f46;
-  font-size: 18px;
+  font-size: 19px;
   font-weight: 900;
  }
 
- 
+ .about-service-container{
+margin-bottom: 20px;
+box-sizing:border-box;
+ }
+
+ .about-service-content{
+margin-left: 80px;
+margin-right: 80px;
+margin-top: 100px;
+/* border-radius: 50%; */
+/* border-style: solid; */
+
+ }
+
+ .row{
+display: flex;
+flex-wrap: wrap;
+box-sizing: border-box;
+ }
+
+ .col-lg-4{
+  flex: 0 0 33.33%;
+  max-width:33.33%;
+ }
+
 a {
   list-style: none;
   color: black;
@@ -128,35 +169,32 @@ textarea {
   padding: 0px 20px;
   box-shadow: 0px 1px 2px rgb(2, 247, 247);
   width: 100%;
-  margin-bottom: 15px;
+  margin-bottom: 0px;
   padding: 5px;
+
 }
  
-.Navbar li {
-  list-style: none;
-  color: white;
-  font-size: 24px;
+.nav-links{
+display:inline-block;
+box-sizing: border-box;
+color: white;
+
+}
+
+.navigation-links{
+  display:inline-block;
+  padding:20px;
+  font-size: 19px;
   font-weight: 600;
-}
+  font-family:cursive;
+  margin-left: 90px;
  
-.card {
-  width: 400px;
-  padding: 10px;
-  box-shadow: 0px 2px 3px grey;
-  margin: 0 auto;
-  margin-bottom: 20px;
-  background: #5190e8;
-  border-radius: 4px;
+
 }
- 
-.ProjectCard h3::after {
-  content: url("https://education-team-2020.s3.eu-west-1.amazonaws.com/web-dev/m3/icon-expand.png");
-  margin-left: 5px;
-}
- 
+
 .EditLocation,
 .AddRental {
-  background: #f9eec3;
+  background: #02ebfb;
   border: 1px solid grey;
   box-shadow: 0px 2px 3px grey;
   width: 400px;
@@ -179,13 +217,14 @@ textarea {
   align-items: center;
 }
  
-.AddTask button,
-.AddProject button {
+.AddRental button,
+.AddLocation button {
   display: block;
 }
  
-.TaskCard {
-  background-color: #dfeef9;
+.RentalCard {
+  background-color: #07effc;
+  
 }
 
 .AddLocation{
@@ -199,13 +238,94 @@ textarea {
   padding-bottom: 15px;
 }
 
+#create-location-button{
+margin-left: 150px;
+}
+#add-rental-button{
+margin-left: 140px;
 
-/* nav{
-  background: #19d8cf;
-  color: white;
-  padding: 0px 20px;
-  box-shadow: 0px 1px 2px gray;
-  width: 100%;
-  margin-bottom: 15px;
-  padding: 5px;
-} */
+}
+
+
+
+
+ .EditRental label{
+  margin-left:600px;
+ }
+
+ .AddLocation label{
+  margin-left: 120px;
+ }
+
+ .EditLocation label {
+  margin-left: 90px;
+ }
+
+ .EditRental label{
+  margin-left: 750px;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+ }
+
+ .AddRental label{
+  margin-left: 90px;
+ }
+
+ .RentalCard  p {
+  font-weight: 200;
+  font-family: cursive;
+ }
+ .RentalCard h2, h3{
+  color:#0c17b7
+ }
+ h1{
+  color:#0c17b7
+ }
+
+.faq-container{
+   /* box-sizing: border-box; */
+  /* display:inline-block;  */
+
+  padding: 20px;
+ 
+
+}
+
+.faq-card{
+  margin-left:90px;
+  margin-top: 20px;
+  width: 40%;
+  float: left;
+  padding: 20px;
+  line-height:0.3;
+  padding-bottom: 10px;
+  border-radius: 15px;
+  word-wrap: break-word;
+  background: linear-gradient(to top, lime, 20%, cyan);
+  }
+
+  .faq-card h4{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color:#0c17b7;
+    padding:0px;
+  }
+
+    
+
+  .card {
+    width: 400px;
+    padding: 10px;
+    box-shadow:rgb(60, 149, 244) 0px 20px 30px -10px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    background: #5190e8;
+    border-radius: 4px;
+
+  }
+   
+#edit-location, #back-to-locations{
+    margin-bottom: 30px;
+  }
+
+  .welcome-video{
+   max-width: 1000px;
+  }

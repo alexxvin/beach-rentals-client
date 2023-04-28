@@ -20,7 +20,7 @@ function LocationsPage() {
 
   return (
     <div className="LocationsPage">
-      <h3>Locations Page</h3>
+      <h1>Locations Page</h1>
       <AddLocation refreshLocations={getAllLocations} />
 
       {locations.map((location, id) => {

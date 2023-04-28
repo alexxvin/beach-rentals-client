@@ -1,8 +1,6 @@
 import axios from "axios";
 import { Link, useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
-import ReactPlayer from "react-player";
-import AddPicture from "./AddRentalPicture";
 
 const API_URL = "http://localhost:5005";
 
@@ -65,9 +63,7 @@ function RentalDetailsPage(props) {
 
           <h3>Description:</h3>
           <p>{rental.description}</p>
-          <h3>Price:</h3>
-          <h3>{rental.price}</h3>
-          {/* <img src={rental.rentalPic} alt="rentalimage" /> */}
+          <h3>Price: ${rental.price}</h3>
           {rental.rentalPic && (
             <img
               id="rentalDetailsImage"
@@ -78,21 +74,25 @@ function RentalDetailsPage(props) {
           {!rental.rentalPic && (
             <div>
               <form onSubmit={handleSubmit}>
-                <input type="file" onChange={(e) => handleFileUpload(e)} />
-                <button>Add rental picture</button>
+                <div>
+                  <label> Add Rental Picture</label>
+                  <input type="file" onChange={(e) => handleFileUpload(e)} />
+                </div>
               </form>
             </div>
           )}
-          {/* <AddPicture /> */}
         </>
       )}
-
-      <Link to={`/rentals/edit/${rentalId}`}>
-        <button>Edit Rental</button>
-      </Link>
-      <Link to={`/location/${rental?.location}`}>
-        <button type="Submit"> Back to Location Details</button>
-      </Link>
+      <div>
+        <Link to={`/rentals/edit/${rentalId}`}>
+          <button>Edit Rental</button>
+        </Link>
+      </div>
+      <div>
+        <Link to={`/location/${rental?.location}`}>
+          <button type="Submit"> Back to Location Details</button>
+        </Link>
+      </div>
     </div>
   );
 }

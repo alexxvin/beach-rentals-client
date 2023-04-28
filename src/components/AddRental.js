@@ -31,7 +31,7 @@ function AddRental(props) {
       <h3>Add New Rental</h3>
 
       <form onSubmit={handleSubmit}>
-        <label>Title</label>
+        <label className="label">Title</label>
         <input
           type="text"
           name="title"
@@ -39,7 +39,7 @@ function AddRental(props) {
           placeholder="Rental title"
           onChange={(e) => setTitle(e.target.value)}
         />
-        <label>Description</label>
+        <label className="label">Description</label>
         <textarea
           type="text"
           name="description"
@@ -47,7 +47,7 @@ function AddRental(props) {
           placeholder="Rental description"
           onChange={(e) => setDescription(e.target.value)}
         />
-        <label>Price</label>
+        <label className="label">Price</label>
         <input
           type="number"
           name="price"
@@ -55,7 +55,9 @@ function AddRental(props) {
           placeholder="Rental Price"
           onChange={(e) => setPrice(e.target.value)}
         />
-        <button type="submit">Add Rental</button>
+        <div id="add-rental-button">
+          <button type="submit">Add Rental</button>
+        </div>
       </form>
     </div>
   );

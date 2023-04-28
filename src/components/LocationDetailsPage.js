@@ -43,12 +43,10 @@ function LocationDetailsPage() {
             <h2>{rental.title}</h2>
             <h3>Description:</h3>
             <p>{rental.description}</p>
-            <h3>Price:</h3>
-            <h3>{rental.price}</h3>
+            <h3>Price: ${rental.price}</h3>
             {rental.rentalPic && (
               <img id="rentalPic" src={rental.rentalPic} alt="rental pic" />
             )}
-            {/* {!rental.rentalPic && <button>Add rental picture</button>} */}
 
             <Link to={`/rentals/${rental._id}`}>
               <button>More info</button>
@@ -57,10 +55,10 @@ function LocationDetailsPage() {
         ))}
 
       <Link to="/location">
-        <button>Back to Locations</button>
+        <button id="back-to-locations">Back to Locations</button>
       </Link>
       <Link to={`/location/edit/${locationId}`}>
-        <button>Edit Location</button>
+        <button id="edit-location">Edit Location</button>
       </Link>
     </div>
   );

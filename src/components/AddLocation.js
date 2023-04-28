@@ -32,7 +32,7 @@ function AddLocation(props) {
       <h3>Add Location</h3>
 
       <form onSubmit={handleSubmit}>
-        <label>Name:</label>
+        <label className="label">Name:</label>
         <input
           type="text"
           name="name"
@@ -41,7 +41,7 @@ function AddLocation(props) {
           onChange={(e) => setName(e.target.value)}
         />
 
-        <label>Street:</label>
+        <label className="label">Street:</label>
         <input
           type="text"
           name="street"
@@ -50,7 +50,7 @@ function AddLocation(props) {
           onChange={(e) => setStreet(e.target.value)}
         />
 
-        <label>City:</label>
+        <label className="label">City:</label>
         <input
           type="text"
           name="city"
@@ -59,7 +59,7 @@ function AddLocation(props) {
           onChange={(e) => setCity(e.target.value)}
         />
 
-        <label>State:</label>
+        <label className="label">State:</label>
         <input
           type="text"
           name="state"
@@ -68,7 +68,7 @@ function AddLocation(props) {
           onChange={(e) => setState(e.target.value)}
         />
 
-        <label>Zip code:</label>
+        <label className="label">Zip code:</label>
         <input
           type="number"
           name="zip"
@@ -76,8 +76,9 @@ function AddLocation(props) {
           placeholder="Zip code"
           onChange={(e) => setZip(e.target.value)}
         />
-
-        <button>Create location</button>
+        <div id="create-location-button">
+          <button>Create location</button>
+        </div>
       </form>
     </div>
   );

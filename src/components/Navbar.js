@@ -1,4 +1,4 @@
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 function Navbar() {
   return (
@@ -8,23 +8,28 @@ function Navbar() {
           <NavLink to="/">
             <img
               class="nav-logo"
-              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQe0chqr6tqcjgbEaGom4XN7HhhlSBxj1wEOQ&usqp=CAU"
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkEoGdf1R1ffd4lalW1E4I_Q_sXG_XbKOFxw&usqp=CAU"
               alt="logo"
             />
           </NavLink>
         </div>
-        <NavLink
-          to="how-it-works"
-          className={({ isActive }) => (isActive ? "selected" : "")}
-        >
-          How it works
-        </NavLink>
-        <NavLink
-          to="location"
-          className={({ isActive }) => (isActive ? "selected" : "")}
-        >
-          Locations
-        </NavLink>
+        <div className="nav-links">
+          <div class="navigation-links">
+            <NavLink to="location" style={{ textDecoration: "none" }}>
+              Locations
+            </NavLink>
+          </div>
+          <div className="navigation-links">
+            <NavLink to="how-it-works" style={{ textDecoration: "none" }}>
+              How it works
+            </NavLink>
+          </div>
+          <div className="navigation-links">
+            <NavLink to="FAQ" style={{ textDecoration: "none" }}>
+              FAQ
+            </NavLink>
+          </div>
+        </div>
       </div>
     </nav>
   );
