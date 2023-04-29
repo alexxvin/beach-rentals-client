@@ -12,7 +12,9 @@ function LocationDetailsPage() {
 
   const getLocation = () => {
     axios
-      .get(`${process.env.API_URL}/api/location/${locationId}`)
+      .get(
+        `https://beach-rentals-server.onrender.com/api/location/${locationId}`
+      )
       .then((response) => {
         const oneLocation = response.data;
         setLocation(oneLocation);

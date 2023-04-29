@@ -17,7 +17,7 @@ function RentalDetailsPage(props) {
 
   useEffect(() => {
     axios
-      .get(`${process.env.API_URL}/api/rentals/${rentalId}`)
+      .get(`https://beach-rentals-server.onrender.com/api/rentals/${rentalId}`)
       .then((response) => {
         setRental(response.data);
         console.log("Location id ===>", response.location);
@@ -34,7 +34,10 @@ function RentalDetailsPage(props) {
     uploadData.append("rentalPic", e.target.files[0]);
 
     axios
-      .post(`${process.env.API_URL}/api/rentalsImage/${rentalId}`, uploadData)
+      .post(
+        `https://beach-rentals-server.onrender.com/api/rentalsImage/${rentalId}`,
+        uploadData
+      )
       .then((response) => {
         setRentalPic(uploadData);
       })
@@ -42,7 +45,7 @@ function RentalDetailsPage(props) {
   };
   const getRental = () => {
     axios
-      .get(`${process.env.API_URL}/api/rentals/${rentalId}`)
+      .get(`https://beach-rentals-server.onrender.com/api/rentals/${rentalId}`)
       .then((response) => {
         const oneRental = response.data;
         console.log(oneRental);
