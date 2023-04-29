@@ -10,6 +10,7 @@ function LocationsPage() {
 
   const getAllLocations = () => {
     console.log("YongoBongo", process.env.API_URL);
+    console.log("YongoBongoENV", process.env);
     axios
       .get(`https://beach-rentals-server.onrender.com/api/location`)
       .then((response) => setLocations(response.data))
