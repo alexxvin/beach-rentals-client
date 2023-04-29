@@ -1,7 +1,7 @@
 import { useState } from "react";
 import axios from "axios";
 
-const API_URL = "https://beach-rentals-server.onrender.com";
+// const API_URL = "https://beach-rentals-server.onrender.com";
 
 function AddLocation(props) {
   const [name, setName] = useState("");
@@ -14,8 +14,9 @@ function AddLocation(props) {
     e.preventDefault();
 
     const requestBody = { street, city, state, zip, name };
+    console.log("ADD location", process.env.API_URL);
     axios
-      .post(`${API_URL}/api/location`, requestBody)
+      .post(`${process.env.API_URL}/api/location`, requestBody)
       .then((response) => {
         setName("");
         setCity("");
