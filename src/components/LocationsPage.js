@@ -9,9 +9,9 @@ function LocationsPage() {
   const [locations, setLocations] = useState([]);
 
   const getAllLocations = () => {
-    console
-      .log("Yongo", process.env.API_URL)
-      .get(`${process.env.API_URL}/api/location`)
+    console.log("YongoBongo", process.env.API_URL);
+    axios
+      .get(`https://beach-rentals-server.onrender.com/api/location`)
       .then((response) => setLocations(response.data))
       .catch((error) => console.log(error));
   };
