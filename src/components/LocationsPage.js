@@ -3,7 +3,7 @@ import axios from "axios";
 import AddLocation from "./AddLocation";
 import LocationCard from "./LocationCard";
 
-const API_URL = `${process.env.API_URL}`;
+const API_URL = `${process.env}`;
 
 function LocationsPage() {
   const [locations, setLocations] = useState([]);
