@@ -3,7 +3,7 @@ import axios from "axios";
 import AddLocation from "./AddLocation";
 import LocationCard from "./LocationCard";
 
-const API_URL = "https://beach-rentals-server.onrender.com/";
+const API_URL = "https://beach-rentals-server.onrender.com";
 
 function LocationsPage() {
   const [locations, setLocations] = useState([]);

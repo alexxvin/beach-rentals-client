@@ -2,7 +2,7 @@ import axios from "axios";
 import { Link, useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 
-const API_URL = "http://localhost:5005";
+const API_URL = "https://beach-rentals-server.onrender.com";
 
 function RentalDetailsPage(props) {
   const [rental, setRental] = useState(null);
