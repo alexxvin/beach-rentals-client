@@ -1,5 +1,3 @@
-import ReactPlayer from "react-player";
-
 function HomePage() {
   return (
     <body>
