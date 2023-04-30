@@ -3,7 +3,7 @@ import axios from "axios";
 import AddLocation from "./AddLocation";
 import LocationCard from "./LocationCard";
 
-// const API_URL = "https://beach-rentals-server.onrender.com";
+const API_URL = "https://beach-rentals-server.onrender.com";
 
 function LocationsPage() {
   const [locations, setLocations] = useState([]);
@@ -12,7 +12,7 @@ function LocationsPage() {
     console.log("YongoBongo", process.env.API_URL);
     console.log("YongoBongoENV", process.env);
     axios
-      .get(`https://beach-rentals-server.onrender.com/api/location`)
+      .get(`${API_URL}/api/location`)
       .then((response) => setLocations(response.data))
       .catch((error) => console.log(error));
   };

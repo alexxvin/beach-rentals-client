@@ -3,7 +3,7 @@ import axios from "axios";
 import { Link, useParams } from "react-router-dom";
 import AddRental from "./AddRental";
 
-// const API_URL = "https://beach-rentals-server.onrender.com";
+const API_URL = "https://beach-rentals-server.onrender.com";
 
 function LocationDetailsPage() {
   const [location, setLocation] = useState(null);
@@ -12,9 +12,7 @@ function LocationDetailsPage() {
 
   const getLocation = () => {
     axios
-      .get(
-        `https://beach-rentals-server.onrender.com/api/location/${locationId}`
-      )
+      .get(`${API_URL}/api/location/${locationId}`)
       .then((response) => {
         const oneLocation = response.data;
         setLocation(oneLocation);

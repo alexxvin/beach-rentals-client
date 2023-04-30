@@ -1,7 +1,7 @@
 import { useState } from "react";
 import axios from "axios";
 
-const API_URL = "http://localhost:5005";
+const API_URL = "https://beach-rentals-server.onrender.com";
 
 function AddLocation(props) {
   const [name, setName] = useState("");
