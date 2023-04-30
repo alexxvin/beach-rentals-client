@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import { useParams, useNavigate } from "react-router-dom";
 
-// const API_URL = "https://beach-rentals-server.onrender.com";
+const API_URL = "http://localhost:5005";
 
 function EditLocation(props) {
   const [name, setName] = useState("");
@@ -16,7 +16,7 @@ function EditLocation(props) {
 
   useEffect(() => {
     axios
-      .get(`${process.env.API_URL}/api/location/${locationId}`)
+      .get(`${API_URL}/api/location/${locationId}`)
       .then((response) => {
         const oneLocation = response.data;
         setStreet(oneLocation.street);
@@ -33,7 +33,7 @@ function EditLocation(props) {
     const requestBody = { street, city, state, zip, name };
 
     axios
-      .put(`${process.env.API_URL}/api/location/${locationId}`, requestBody)
+      .put(`${API_URL}/api/location/${locationId}`, requestBody)
       .then((response) => {
         navigate(`/location/${locationId}`);
       });
@@ -41,7 +41,7 @@ function EditLocation(props) {
 
   const deleteLocation = () => {
     axios
-      .delete(`${process.env.API_URL}/api/location/${locationId}`)
+      .delete(`${API_URL}/api/location/${locationId}`)
       .then(() => {
         navigate("/location");
       })

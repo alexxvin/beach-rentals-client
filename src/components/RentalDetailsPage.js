@@ -2,7 +2,7 @@ import axios from "axios";
 import { Link, useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 
-// const API_URL = "https://beach-rentals-server.onrender.com";
+const API_URL = "http://localhost:5005";
 
 function RentalDetailsPage(props) {
   const [rental, setRental] = useState(null);
@@ -16,13 +16,11 @@ function RentalDetailsPage(props) {
   console.log(rental);
 
   useEffect(() => {
-    axios
-      .get(`https://beach-rentals-server.onrender.com/api/rentals/${rentalId}`)
-      .then((response) => {
-        setRental(response.data);
-        console.log("Location id ===>", response.location);
-        console.log(response.data);
-      });
+    axios.get(`${API_URL}/api/rentals/${rentalId}`).then((response) => {
+      setRental(response.data);
+      console.log("Location id ===>", response.location);
+      console.log(response.data);
+    });
   }, [rentalId]);
 
   const handleSubmit = (e) => {
@@ -34,10 +32,7 @@ function RentalDetailsPage(props) {
     uploadData.append("rentalPic", e.target.files[0]);
 
     axios
-      .post(
-        `https://beach-rentals-server.onrender.com/api/rentalsImage/${rentalId}`,
-        uploadData
-      )
+      .post(`${API_URL}/api/rentalsImage/${rentalId}`, uploadData)
       .then((response) => {
         setRentalPic(uploadData);
       })
@@ -45,7 +40,7 @@ function RentalDetailsPage(props) {
   };
   const getRental = () => {
     axios
-      .get(`https://beach-rentals-server.onrender.com/api/rentals/${rentalId}`)
+      .get(`${API_URL}/api/rentals/${rentalId}`)
       .then((response) => {
         const oneRental = response.data;
         console.log(oneRental);

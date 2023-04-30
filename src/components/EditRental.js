@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 
-// const API_URL = "https://beach-rentals-server.onrender.com";
+const API_URL = "http://localhost:5005";
 
 function EditRental(props) {
   const [title, setTitle] = useState("");
@@ -16,7 +16,7 @@ function EditRental(props) {
 
   useEffect(() => {
     axios
-      .get(`${process.env.API_URL}/api/rentals/${rentalId}`)
+      .get(`${API_URL}/api/rentals/${rentalId}`)
       .then((response) => {
         const oneRental = response.data;
         setTitle(oneRental.title);
@@ -32,7 +32,7 @@ function EditRental(props) {
     const requestBody = { title, description, price };
 
     axios
-      .put(`${process.env.API_URL}/api/rentals/${rentalId}`, requestBody)
+      .put(`${API_URL}/api/rentals/${rentalId}`, requestBody)
       .then((response) => {
         navigate(`/rentals/${rentalId}`);
       });
@@ -40,7 +40,7 @@ function EditRental(props) {
 
   const deleteRental = () => {
     axios
-      .delete(`${process.env.API_URL}/api/rentals/${rentalId}`)
+      .delete(`${API_URL}/api/rentals/${rentalId}`)
       .then(() => {
         navigate("/location");
       })
