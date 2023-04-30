@@ -14,7 +14,7 @@ function AddLocation(props) {
     e.preventDefault();
 
     const requestBody = { street, city, state, zip, name };
-    console.log("ADD location", process.env.REACT_APP_API_URL);
+    console.log("ADD location", process.env);
     axios
       .post(`${API_URL}/api/location`, requestBody)
       .then((response) => {

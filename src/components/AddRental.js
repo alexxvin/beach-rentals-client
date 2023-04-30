@@ -1,6 +1,6 @@
 import { useState } from "react";
 import axios from "axios";
-const API_URL = "https://beach-rentals-server.onrender.com";
+const API_URL = process.env.REACT_APP_API_URL;
 
 function AddRental(props) {
   const [title, setTitle] = useState("");

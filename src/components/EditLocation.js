@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import { useParams, useNavigate } from "react-router-dom";
 
-const API_URL = "https://beach-rentals-server.onrender.com";
+const API_URL = process.env.REACT_APP_API_URL;
 
 function EditLocation(props) {
   const [name, setName] = useState("");
