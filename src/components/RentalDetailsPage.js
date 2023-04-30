@@ -74,7 +74,7 @@ function RentalDetailsPage(props) {
           {!rental.rentalPic && (
             <div>
               <form onSubmit={handleSubmit}>
-                <div>
+                <div id="addPictureLabel">
                   <label> Add Rental Picture</label>
                   <input type="file" onChange={(e) => handleFileUpload(e)} />
                 </div>
