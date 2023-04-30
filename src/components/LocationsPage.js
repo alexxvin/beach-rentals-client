@@ -8,7 +8,6 @@ function LocationsPage() {
   const [locations, setLocations] = useState([]);
 
   const getAllLocations = () => {
-    console.log("YongoBongo", process.env.REACT_APP_API_URL);
     console.log("YongoBongoENV", process.env);
     axios
       .get(`${API_URL}/api/location`)
